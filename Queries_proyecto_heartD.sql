@@ -27,3 +27,14 @@ SELECT
 FROM heart_main h
 JOIN dim_target t ON h.diagnosis_id = t.diagnosis_id
 GROUP BY estado_salud;
+
+-- 3. Distribución por género
+-- Identificar diferencias en la enfermedad entre hombres y mujeres
+
+
+-- 4. Tipo de chest pain vs enfermedad
+-- Identificar diferencias en la enfermedad entre hombres y mujeres
+
+
+-- 5. Tipos de chest pain más relevantes en pacientes con enfermedad
+-- filtrar solo los casos más significativos
