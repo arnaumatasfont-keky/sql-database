@@ -8,7 +8,7 @@ El dataset proviene de una fuente pública de datos médicos sobre enfermedades 
 
 Se han analizado 303, habian dos nulos y nos quedamos con 301
 
-Estructura de la base de datos (modelo en estrella):
+Estructura de la base de datos:
 
 - heart_main → tabla principal con datos clínicos de los pacientes
 - dim_target → estado de salud (con o sin enfermedad)
@@ -69,14 +69,15 @@ Variables principales:
 - JOIN → para combinar la tabla principal con las dimensiones
 - CASE WHEN → para crear categorías interpretables (sano / enfermo)
 - WINDOW FUNCTIONS → para calcular porcentajes dentro de grupo
+- HAVING → para filtrar número de casos relacionados con el chest pain si habían menos de 5 casos no incluirlo.
 
 ---
 
 ## Resultados / Insights (hallagoz más importanes, claros y accionables)
 - Los pacientes con enfermedad suelen tener mayor edad
 - Hay más casos en hombres que en mujeres
-- El tipo de chest pain está relacionado con la enfermedad
-- El colesterol no parece tan determinante como esperábamos
+- El tipo de chest pain no es un buen indicativo de la gravedad de la enfermedad y que la mayoria de pacientes son asintomaticos
+- El colsterol y la presion arterial si son factores de riesgo, puesto que la media en pacientes que tierne la enfermedad es más alta que los pacientes sanos
 
 
 ---
