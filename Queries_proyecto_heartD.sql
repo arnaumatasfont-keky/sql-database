@@ -51,6 +51,7 @@ FROM heart_main AS hm
 JOIN dim_cp AS dc ON hm.cp_id = dc.cp_id
 JOIN dim_target AS dt ON hm.diagnosis_id = dt.diagnosis_id
 GROUP BY dc.cp_name, dt.diagnosis_desc, hm.diagnosis_id
+HAVING Casos_Detectados >= 5
 ORDER BY hm.diagnosis_id ASC, Porcentaje_total DESC;
 
 -- 5. Relación entre niveles de colesterol y presencia de enfermedad y gravedad.
